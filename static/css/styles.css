@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+/* root variable */
+:root {
+    --color-hover: #FBBEC0 !important;
+    --color-light: #69DADB !important;
+    --color-primary: #1597E5 !important;
+    --color-secondary: #113CFC !important;
+    --color-acent: #193498 !important;
+    --font-poppin: 'Poppins', sans-serif;
+}
+.displace{
+    background-color: var(--color-light);
+    padding: 10px;
+    border-radius: 15px 0 15px 0;
+}
+
+.acttive{
+    background-color: #FBBEC0;
+    padding: 10px;
+    border-radius: 15px 0 15px 0;
+}
+.heart-color{
+    color: red;
+}
+
+.shopping-section .card {
+    border-radius: 30px 0 30px 0;
+}
+
+.shopping-section .card .card-image {
+    border-radius: 30px 0  30px 0;
+}
+
+.shopping-section .text-side a li {
+    padding: 10px 20px;
+    color: black;
+}
+
+.shopping-section .text-side a li:hover {
+    background-color: var(--color-light);
+
+}
+@media (max-width: 767px) {
+    .shopping-section .col-md-3{
+        display: none;
+    }
+}
+
+/* page top section */
+.page-top-section {
+    width: 100%;
+    background-color: var(--color-light);
+}
+
+.page-top-section .page-top-text h3 {
+    padding: 50px 0;
+}
+
+
+/* ============================================== */
+/* body nav */
+
+@media (min-width: 768px) {
+    .quick-nav {
+        width: 100%;
+        display: none;
+    }
+    .quick-nav .li{
+        width: 10%;
+        
+    }
+}
+
+.quick-nav .p {
+    /* font-size: 15px; */
+    margin: 15px;
+    color: black;
+}
+
+@media (max-width: 551px) {
+    .quick-nav .p {
+        font-size: 15px;
+        margin: 10px;
+        color: black;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .quick-nav {
+        width: 100%;
+    }
+    .quick-nav hr{
+        border: 2px solid #FBBEC0;
+    }
+    .quick-nav .li{
+        width: 10%;
+        
+    }
+    .displace{
+        background-color: var(--color-light);
+        color: #ffffff;
+        padding: 10px;
+        border-radius: 15px 0 15px 0;
+        margin: 10px;
+        
+    }
+    .displace:hover{
+        background-color: #FBBEC0;
+        color: #ffffff;
+
+    }
+}

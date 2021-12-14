@@ -1,0 +1,811 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- jquary cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <title>E-Commerce</title>
+
+    <!-- Angular js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
+    <!-- google font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="stylesheet" href="static/css/index.css">
+
+
+
+
+</head>
+
+<body>
+
+    <!-- header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light shadow">
+            <div class="container-fluid">
+                <a class="p navbar-brand" href="index.html">Aba<span>Conect</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
+                        <li class="nav-item">
+                            <a class="p nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="p nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="p nav-link" href="women.html">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="p nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="p form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <a class="p btn btn-search" type="submit">Search</a>
+                    </form>
+                    <div class="nav-icon my-auto m-0 p-0 text-center">
+                        <ul class="navbar-icon m-auto">
+                            <li><a href="cart.html"><i class="fas fa-shopping-cart"><span class="mx-1">0</span></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="signin mx-5 text-center">
+                        <a class="p btn btn-search" href="" data-bs-target="#sign-in" data-bs-toggle="modal">Sign In</a>
+                        <a class="p btn btn-search" href="" data-bs-target="#sign-up" data-bs-toggle="modal">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- header end -->
+
+    <!-- ============================================================================================================================== -->
+    <!-- sign in -->
+    <div class="modal fade" id="sign-in" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content text-light">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Sign In</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label><i class="fa fa-envelope"></i> Email :</label>
+                        <input type="email" placeholder="Email Id" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fa fa-password"></i> Password :</label>
+                        <input type="password" placeholder="Password" class="form-control">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Sign in</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- sign in end -->
+    <!-- sign up  -->
+    <div class="modal fade" id="sign-up" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content text-light">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Let's Create Your Account for You</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label><i class="fa fa-user"></i> Name :</label>
+                        <input type="text" placeholder="Name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fa fa-envelope"></i> Email :</label>
+                        <input type="email" placeholder="Email Id" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fa fa-mobile"></i> Mobile Number :</label>
+                        <input type="number" placeholder="Mobile Number" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fa fa-address"></i> Address :</label>
+                        <input type="text" placeholder="Address" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fa fa-password"></i> Password :</label>
+                        <input type="password" placeholder="Password" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fa fa-password"></i> Confirm Password :</label>
+                        <input type="password" placeholder="Confirm Password" class="form-control">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Sign up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- sign up end -->
+    <!-- ============================================================================================================================== -->
+
+    <!-- page top section -->
+    <div class="page-top-section">
+        <div class="page-top-text text-center">
+            <h3 class="h3">Guinea</h3>
+        </div>
+    </div>
+    <!-- page top section -->
+
+    <!-- body nav -->
+    <div class="quick-nav py-5">
+        <div class="d-flex p justify-content-center">
+            <div class="col">
+                <a href="women.html">
+                    <li class="displace">Women</li>
+                </a>
+                <a href="men.html">
+                    <li class="displace">Men</li>
+                </a>
+                <a href="children.html">
+                    <li class="displace">Children</li>
+                </a>
+                <a href="material.html">
+                    <li class="displace">Cotton</li>
+                </a>
+            </div>
+            <div class="col m-auto">
+                <a href="niddle.html">
+                    <li class="displace">Niddles</li>
+                </a>
+                <a href="thread.html">
+                    <li class="displace">Thread</li>
+                </a>
+                <a href="leather.html">
+                    <li class="displace">Leather</li>
+                </a>
+            </div>
+            <div class="col">
+                <a href="bulk-items.html">
+                    <li class="displace">Ankara</li>
+                </a>
+                <a href="aso-oke.html">
+                    <li class="displace">Aso Oke</li>
+                </a>
+                <a href="lace.html">
+                    <li class="displace">Lace</li>
+                </a>
+                <a href="gini.html">
+                    <li class="displace">Guinea</li>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- body nav end -->
+
+    <!-- shopping -->
+    <div class="shopping-section">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-12 col-md-3">
+                    <div class="p text-side py-5 text-center">
+                        <ul>
+                            <a href="women.html">
+                                <li>Women's Collection</li>
+                            </a>
+                            <hr>
+                            <a href="men.html">
+                                <li>Men's Collection</li>
+                            </a>
+                            <hr>
+                            <a href="children.html">
+                                <li>Children's Collection</li>
+                            </a>
+                            <hr>
+                            <a href="material.html">
+                                <li>Cotton</li>
+                            </a>
+                            <hr>
+                            <a href="niddle.html">
+                                <li>Niddles</li>
+                            </a>
+                            <hr>
+                            <a href="thread.html">
+                                <li>Thread</li>
+                            </a>
+                            <hr>
+                            <a href="leather.html">
+                                <li>Leather</li>
+                            </a>
+                            <hr>
+                            <a href="bulk-items.html">
+                                <li>Ankara</li>
+                            </a>
+                            <hr>
+                            <a href="aso-oke.html">
+                                <li>Aso Oke</li>
+                            </a>
+                            <hr>
+                            <a href="lace.html">
+                                <li>Lace</li>
+                            </a>
+                            <hr>
+                            <a href="gini.html">
+                                <li>Guinea</li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-9">
+                    <div class="content">
+                        <!-- first row -->
+                        <div class="row p-2">
+
+                            <!-- first item -->
+                            <div class="col-sm-12 col-md-4 my-4">
+                                <div class="card">
+                                    <img src="static/img/Ivo-Gini-italy-Giza-Cotton-SDL352746396-1-f3335.jpg" alt=""
+                                        class="card-image" width="100%">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Ivo Gini <span class="float-end"><i class="fas fa-heart"
+                                                    id="heart1" style="font-size: 20px; color:black;"></i></span></h4>
+                                        <div class="d-flex justify-content-start small text-warning mb-2">
+                                            <div class="fas fa-star"></div>
+                                            <div class="fas fa-star"></div>
+                                            <div class="fas fa-star"></div>
+                                            <div class="fas fa-star"></div>
+                                            <div class="fas fa-star"></div>
+                                        </div>
+                                        <div class="item-price">#19000</div>
+                                        <div class="card-footer border-top-0 bg-transparent mt-4">
+                                            <div class="text-center"><a
+                                                    class="btn btn-outline-dark btn-theme3 mt-auto">Add to
+                                                    cart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- first item end -->
+
+                            <!-- second item -->
+                            <div class="col-sm-12 col-md-4 my-4">
+                                <div class="card">
+                                    <img src="static/img/fashion-fever-shirting-fabric-250x250.jpg" alt=""
+                                        class="card-image">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Fever Shirting Gini <span class="float-end"><i
+                                                    class="fas fa-heart" id="heart2"
+                                                    style="font-size: 20px; color:black;"></i></span></h4>
+                                        <div class="d-flex justify-content-start small text-warning mb-2">
+                                            <div class="fas fa-star"></div>
+                                            <!-- <div class="fas fa-star"></div>
+                                            <div class="fas fa-star"></div>
+                                            <div class="fas fa-star"></div> -->
+                                        </div>
+                                        <div class="item-price">#18000</div>
+                                        <div class="card-footer border-top-0 bg-transparent mt-4">
+                                            <div class="text-center"><a
+                                                    class="btn btn-outline-dark btn-theme3 mt-auto">Add to
+                                                    cart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- second item end -->
+
+                            <!-- third item -->
+                            <div class="col-sm-12 col-md-4 my-4">
+                                <div class="card">
+                                    <img src="static/img/gini1.jpg" alt="" class="card-image">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Italian Gini <span class="float-end"><i
+                                                    class="fas fa-heart" id="heart3"
+                                                    style="font-size: 20px; color:black;"></i></span></h4>
+                                        <div class="d-flex justify-content-start small text-warning mb-2">
+                                            <div class="fas fa-star"></div>
+                                            <div class="fas fa-star"></div>
+                                            <div class="fas fa-star"></div>
+                                            <div class="fas fa-star"></div>
+                                            <!-- <div class="fas fa-star"></div> -->
+                                        </div>
+                                        <div class="item-price">#20500</div>
+                                        <div class="card-footer border-top-0 bg-transparent mt-4">
+                                            <div class="text-center"><a
+                                                    class="btn btn-outline-dark btn-theme3 mt-auto">Add to
+                                                    cart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- third item end -->
+
+                        </div>
+                        <!-- first row end -->
+
+                        <!-- seconmd row -->
+                        <div class="row p-2">
+
+                            <!-- first item -->
+                            <div class="col-sm-12 col-md-4 my-4">
+                                <div class="card">
+                                    <img src="static/img/gini2.jpg" alt="" class="card-image">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Local Gini <span class="float-end"><i
+                                                    class="fas fa-heart" id="heart1"
+                                                    style="font-size: 20px; color:black;"></i></span></h4>
+                                        <div class="d-flex justify-content-start small text-warning mb-2">
+                                            <div class="fas fa-star"></div>
+                                            <div class="fas fa-star"></div>
+                                            <div class="fas fa-star"></div>
+                                            <!-- <div class="fas fa-star"></div>
+                      <div class="fas fa-star"></div> -->
+                                        </div>
+                                        <div class="item-price">#17500</div>
+                                        <div class="card-footer border-top-0 bg-transparent mt-4">
+                                            <div class="text-center"><a
+                                                    class="btn btn-outline-dark btn-theme3 mt-auto">Add to
+                                                    cart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- first item end -->
+
+                            <!-- second item -->
+                            <div class="col-sm-12 col-md-4 my-4">
+                                <div class="card">
+                                    <img src="static/img/Guinea-Brocade-New-Color-Shadda-Bazin-Riche-Fabric-Damask-100-Cotton-African-Garment-Fabric-Germany-Quality.webp"
+                                        alt="" class="card-image">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Brazin Guinea <span class="float-end"><i
+                                                    class="fas fa-heart" id="heart2"
+                                                    style="font-size: 20px; color:black;"></i></span></h4>
+                                        <div class="d-flex justify-content-start small text-warning mb-2">
+                                            <div class="fas fa-star"></div>
+                                            <div class="fas fa-star"></div>
+                                            <div class="fas fa-star"></div>
+                                            <div class="fas fa-star"></div>
+                                        </div>
+                                        <div class="item-price">#30000</div>
+                                        <div class="card-footer border-top-0 bg-transparent mt-4">
+                                            <div class="text-center"><a
+                                                    class="btn btn-outline-dark btn-theme3 mt-auto">Add to
+                                                    cart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- second item end -->
+
+                            <!-- third item -->
+                            <div class="col-sm-12 col-md-4 my-4">
+                                <div class="card">
+                                    <img src="static/img/2021-New-Bazin-Riche-Fabric-Germany-Quality-10-Meters-Shining-Soft-Guinea-Brocade-Shadda-Fabric-Big-Shadda.jpg"
+                                        alt="" class="card-image">
+                                    <div class="card-body">
+                                        <h4 class="card-title">China Guinea <span class="float-end"><i
+                                                    class="fas fa-heart" id="heart3"
+                                                    style="font-size: 20px; color:black;"></i></span></h4>
+                                        <div class="d-flex justify-content-start small text-warning mb-2">
+                                            <div class="fas fa-star"></div>
+                                            <div class="fas fa-star"></div>
+                                            <div class="fas fa-star"></div>
+                                            <div class="fas fa-star"></div>
+                                            <div class="fas fa-star"></div>
+                                        </div>
+                                        <div class="item-price">#34000</div>
+                                        <div class="card-footer border-top-0 bg-transparent mt-4">
+                                            <div class="text-center"><a
+                                                    class="btn btn-outline-dark btn-theme3 mt-auto">Add to
+                                                    cart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- third item end -->
+
+                        </div>
+                        <!-- second row end -->
+
+                        <!-- third row -->
+                        <div class="row p-2">
+
+                            <!-- first item -->
+                            <div class="col-sm-12 col-md-4 my-4">
+                                <div class="card">
+                                    <img src="static/img/qw17_spo_1024x1024.jpg" alt="" class="card-image">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Indigo Guinea <span class="float-end"><i
+                                                    class="fas fa-heart" id="heart1"
+                                                    style="font-size: 20px; color:black;"></i></span></h4>
+                                        <div class="d-flex justify-content-start small text-warning mb-2">
+                                            <div class="fas fa-star"></div>
+                                            <div class="fas fa-star"></div>
+                                            <!-- <div class="fas fa-star"></div> -->
+                                            <div class="fas fa-star"></div>
+                                            <div class="fas fa-star"></div>
+                                        </div>
+                                        <div class="item-price">#37000</div>
+                                        <div class="card-footer border-top-0 bg-transparent mt-4">
+                                            <div class="text-center"><a
+                                                    class="btn btn-outline-dark btn-theme3 mt-auto">Add to
+                                                    cart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- first item end -->
+
+                            <!-- second item -->
+                            <div class="col-sm-12 col-md-4 my-4">
+                                <div class="card">
+                                    <img src="static/img/gini4.jpg" alt="" class="card-image">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Oska Guinea <span class="float-end"><i
+                                                    class="fas fa-heart" id="heart2"
+                                                    style="font-size: 20px; color:black;"></i></span></h4>
+                                        <div class="d-flex justify-content-start small text-warning mb-2">
+                                            <div class="fas fa-star"></div>
+                                            <!-- <div class="fas fa-star"></div> -->
+                                            <!-- <div class="fas fa-star"></div> -->
+                                            <div class="fas fa-star"></div>
+                                            <div class="fas fa-star"></div>
+                                        </div>
+                                        <div class="item-price">#26000</div>
+                                        <div class="card-footer border-top-0 bg-transparent mt-4">
+                                            <div class="text-center"><a
+                                                    class="btn btn-outline-dark btn-theme3 mt-auto">Add to
+                                                    cart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- second item end -->
+
+                            <!-- third item -->
+                            <div class="col-sm-12 col-md-4 my-4">
+                                <div class="card">
+                                    <img src="static/img/100-Germany-Cotton-Original-Bazin-Riche-Highest-Quality-Fabric-Guinea-Brocade-Feitex-Jacquard-Shadda-Nice-Parfum.jpg"
+                                        alt="" class="card-image">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Germany Guinea <span class="float-end"><i
+                                                    class="fas fa-heart" id="heart3"
+                                                    style="font-size: 20px; color:black;"></i></span></h4>
+                                        <div class="d-flex justify-content-start small text-warning mb-2">
+                                            <div class="fas fa-star"></div>
+                                            <div class="fas fa-star"></div>
+                                            <div class="fas fa-star"></div>
+                                            <div class="fas fa-star"></div>
+                                            <div class="fas fa-star"></div>
+                                        </div>
+                                        <div class="item-price">#37000</div>
+                                        <div class="card-footer border-top-0 bg-transparent mt-4">
+                                            <div class="text-center"><a
+                                                    class="btn btn-outline-dark btn-theme3 mt-auto">Add to
+                                                    cart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- third item end -->
+
+                        </div>
+                        <!-- third row end -->
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- shopping -->
+
+    <!-- footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-3 my-lg-auto my-4">
+                    <h6 class="p m-0">GET TO KNOW US</h6>
+                    <hr>
+                    <ul>
+                        <li class="p"><a href="#">About Us</a></li>
+                        <li class="p"><a href="#">Blog</a></li>
+                        <li class="p"><a href="#">Career</a></li>
+                        <li class="p"><a href="#">Forum</a></li>
+                        <li class="p"><a href="#">Terms & Condition</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-3 col-6 my-lg-0 my-4">
+                    <h6 class="p m-0">PAYMENT METHOD</h6>
+                    <hr>
+                    <ul>
+                        <li class="p"><a href="#">Mastherard</a></li>
+                        <li class="p"><a href="#">VISA</a></li>
+                        <li class="p"><a href="#">Verve</a></li>
+                        <li class="p"><a href="#">Wallet</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-3 col-6 my-lg-0 my-4">
+                    <h6 class=" p m-0">MORE INFO</h6>
+                    <hr>
+                    <ul>
+                        <li class="p"><a href="#">Site Map</a></li>
+                        <li class="p"><a href="#">Track My Order</a></li>
+                        <li class="p"><a href="#">Privacy Policy</a></li>
+                        <li class="p"><a href="#">Authentic Items Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-3 col-6 my-lg-0 my-4">
+                    <h6 class=" p m-0">contacts</h6>
+                    <hr>
+                    <ul>
+                        <li class="p">+2348021440772</li>
+                        <li class="p">brand@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <h6 class="p m-0">JOIN US ON</h6>
+                    <hr>
+                    <div class="fast-icons">
+                        <a href="#"><i class="fab fa-facebook mx-1" style="font-size: 20px;"></i></a>
+                        <a href="#"><i class="fab fa-instagram mx-1" style="font-size: 20px;"></i></a>
+                        <a href="#"><i class="fab fa-twitter mx-1" style="font-size: 20px;"></i></a>
+                        <a href="#"><i class="fab fa-youtube mx-1" style="font-size: 20px;"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+
+    <!-- custom js -->
+    <script src="static/js/index.js"></script>
+    <script>
+        if (document.readyState == 'loading') {
+            document.addEventListener('DOMContentLoaded', ready)
+        } else {
+            ready()
+        }
+
+
+        function ready() {
+            var removeCartItemButtons = document.getElementsByClassName('btn-danger')
+            for (var i = 0; i < removeCartItemButtons.length; i++) {
+                var button = removeCartItemButtons[i]
+                button.addEventListener('click', removeCartItem)
+            }
+        }
+
+
+        let carts = document.querySelectorAll('.btn-theme3');
+        let products = [
+            {
+                name: "Ivo Gini",
+                tag: 'Ivo-Gini-italy-Giza-Cotton-SDL352746396-1-f3335.jpg',
+                price: 19000,
+                incart: 0
+            },
+            {
+                name: "Fever Shirting Gini",
+                tag: 'fashion-fever-shirting-fabric-250x250.jpg',
+                price: 18000,
+                incart: 0
+            },
+            {
+                name: "Italian Gini",
+                tag: 'gini1.jpg',
+                price: 20500,
+                incart: 0
+            },
+            {
+                name: "Local Gini",
+                tag: 'gini2.jpg',
+                price: 17500,
+                incart: 0
+            },
+            {
+                name: "Brazin Guinea",
+                tag: 'Guinea-Brocade-New-Color-Shadda-Bazin-Riche-Fabric-Damask-100-Cotton-African-Garment-Fabric-Germany-Quality.webp',
+                price: 30000,
+                incart: 0
+            },
+            {
+                name: ">China Guinea",
+                tag: '2021-New-Bazin-Riche-Fabric-Germany-Quality-10-Meters-Shining-Soft-Guinea-Brocade-Shadda-Fabric-Big-Shadda.jpg',
+                price: 34000,
+                incart: 0
+            },
+            {
+                name: "Indigo Guinea",
+                tag: 'qw17_spo_1024x1024.jpg',
+                price: 37000,
+                incart: 0
+            },
+            {
+                name: "Oska Guinea",
+                tag: 'gini4.jpg',
+                price: 26000,
+                incart: 0
+            },
+            {
+                name: "Germany Guinea",
+                tag: '100-Germany-Cotton-Original-Bazin-Riche-Highest-Quality-Fabric-Guinea-Brocade-Feitex-Jacquard-Shadda-Nice-Parfum.jpg',
+                price: 37000,
+                incart: 0
+            }
+        ]
+        for (let i = 0; i < carts.length; i++) {
+            carts[i].addEventListener('click', () => {
+                cartNumbers(products[i])
+                totalCost(products[i])
+            })
+        }
+
+        function onLoadCartNumbers() {
+            let productNumbers = localStorage.getItem('cartNumbers')
+
+            if (productNumbers) {
+                document.querySelector('li span').textContent = productNumbers;
+            }
+        }
+
+        function cartNumbers(product) {
+            let productNumbers = localStorage.getItem('cartNumbers')
+            productNumbers = parseInt(productNumbers)
+
+            if (productNumbers) {
+                localStorage.setItem('cartNumbers', productNumbers + 1)
+                document.querySelector('li span').textContent = productNumbers + 1;
+            } else {
+                localStorage.setItem('cartNumbers', 1)
+                document.querySelector('li span').textContent = 1;
+            }
+
+            setItems(product);
+
+        }
+
+        function setItems(product) {
+            let cartItems = localStorage.getItem('productsInCart')
+            cartItems = JSON.parse(cartItems)
+
+
+
+
+            if (cartItems != null) {
+
+                if (cartItems[product.tag] == undefined) {
+                    cartItems = {
+                        ...cartItems,
+                        [product.tag]: product
+                    }
+                }
+                cartItems[product.tag].incart += 1;
+            } else {
+                product.incart = 1;
+                cartItems = {
+                    [product.tag]: product
+                }
+            }
+
+
+            localStorage.setItem('productsInCart', JSON.stringify(cartItems))
+        }
+
+        function totalCost(product) {
+            let cartCost = localStorage.getItem('totalCost');
+
+
+            if (cartCost != null) {
+                cartCost = parseInt(cartCost);
+                localStorage.setItem('totalCost', cartCost + product.price)
+            } else {
+                localStorage.setItem('totalCost', product.price)
+            }
+        }
+
+
+        function removeCartItem(event) {
+            var buttonClicked = event.target
+            buttonClicked.parentElement.parentElement.remove()
+
+        }
+
+
+        function displayCart() {
+            let cartItems = localStorage.getItem('productsInCart')
+            cartItems = JSON.parse(cartItems)
+
+            let productContainer = document.querySelector('.cart-items')
+            let cartCost = localStorage.getItem('totalCost');
+            if (cartItems && productContainer) {
+
+                productContainer.innerHTML = '';
+                Object.values(cartItems).map(item => {
+                    productContainer.innerHTML += `
+                <div class="cart-row d-flex">
+                    <div class="cart-item cart-column">
+                        <img class="cart-item-image" src="./static/img/${item.tag}" width="100" height="100">
+                        <span class="cart-item-title">${item.name}</span>
+                    </div>
+                    <span class="cart-price cart-column">${item.price},00</span>
+                    <div class="cart-quantity cart-column">
+                    <input type="number" value="${item.incart}" class="cart-quantity-input">
+                        <button class="btn mx-4 btn-danger" type="button">REMOVE</button>
+                    </div>
+                </div>
+            `
+                })
+                productContainer.innerHTML += `
+                <div class="cart-total">
+                    <strong class="cart-total-title">Total</strong>
+                    <span class="cart-total-price">$${cartCost},00</span>
+                </div>
+    
+        `
+            }
+        }
+        onLoadCartNumbers();
+        displayCart();
+    </script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> -->
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+
+
+
+</body>
+
+</html>

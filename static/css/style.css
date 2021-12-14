@@ -1,0 +1,323 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    list-style-type: none;
+}
+/* root variable */
+:root {
+    --color-hover: #FBBEC0 !important;
+    --color-light: #69DADB !important;
+    --color-primary: #1597E5 !important;
+    --color-secondary: #113CFC !important;
+    --color-acent: #193498 !important;
+    --font-poppin: 'Poppins', sans-serif;
+   }
+
+/* custom classes */
+.bg-light-color{
+    background-color: var(--color-light);
+}
+.color-light-color{
+    color: var(--color-light);
+}
+.bg-primary{
+    background-color: var(--color-primary);
+}
+.color-primary{
+    color: var(--color-primary);
+}
+.bg-secondary{
+    background-color: var(--color-secondary);
+}
+.color-secondary{
+    color: var(--color-secondary);
+}
+.bg-acent{
+    background-color: var(--color-acent);
+}
+.color-acent{
+    color: var(--color-acent);
+}
+.bg-hover{
+    background-color: var(--color-hover);
+}
+.color-hover{
+    color: var(--color-hover);
+}
+
+
+
+/* .btn-search{
+  color: white;
+  background-color: var(--color-light);
+}
+.btn-search:hover{
+  color: var(--color-acent);
+}
+.btn-theme{
+    padding: 15px;
+    background-color: var(--color-acent);
+    color: var(--color-light);
+    font-family: var(--font-poppin);
+    border-radius: 10px 0 10px 0;
+    outline: none;
+}
+.btn-theme:hover{
+    color: #ffffff;
+}
+.btn-theme2{
+    padding: 5px 10px;
+    background-color: var(--color-acent);
+    color: var(--color-light);
+    font-family: var(--font-poppin);
+    border: none;
+    border-radius: 10px 0 10px 0;
+    outline: none;
+}
+.btn-theme2:hover{
+    color: #ffffff;
+} */
+/* .btn-theme3{
+    padding: 5px 10px;
+    background-color: var(--color-acent);
+    color: var(--color-light);
+    font-family: var(--font-poppin);
+    border: none;
+    border-radius: 5px;
+    border-radius: 10px 0 10px 0;
+    outline: none;
+}
+.btn-theme3:hover{
+    background-color: var(--color-hover);
+    color: #ffffff;
+} */
+.h1, .h2, .h3, .h4, .h5, .h6, .p{
+    font-family: var(--font-poppin);
+}
+a, li{
+    text-decoration: none;
+}
+.btn-carousel{
+    width: 90px;
+}
+img{
+  height: 250px;
+}
+
+section {
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+  }
+
+body::-webkit-scrollbar {
+    width: 12px;
+}
+body::-webkit-scrollbar-track {
+    background: white;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: var(--color-acent);
+    border-radius: 20px;
+    border: 2px solid white; 
+}
+
+
+
+
+
+  /* material section */
+.material-section{
+      width: 100%;
+      padding: 50px 0;
+}
+/* first material */
+.material-section .fabrics{
+    height: 350px;  
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), url("../img/fabrics.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    border-radius: 30px 0 30px 0;
+}
+.material-section .fabrics .h3{
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 3px 5px 2px  var(--color-secondary);
+    margin-bottom: 5px;
+}
+.material-section .fabrics .p{
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+/* second material */
+.material-section .leather{
+    height: 350px;  
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), url("../img/Leather-Export.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    border-radius: 30px 0 30px 0;
+}
+.material-section .leather .h3{
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 3px 5px 2px  var(--color-secondary);
+    margin-bottom: 5px;
+}
+.material-section .leather .p{
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+@media (max-width: 767px) {
+    .material-section .leather{
+        margin: 20px 0;
+    }
+}
+/* third material */
+.material-section .thread{
+    height: 350px;  
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), url("../img/thread.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    border-radius: 30px 0 30px 0;
+}
+.material-section .thread .h3{
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 3px 5px 2px  var(--color-secondary);
+    margin-bottom: 5px;
+}
+.material-section .thread .p{
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+/* ready made */
+.ready-made-section{
+    width: 100%;
+    padding: 100px 0;
+    background-color: lightgrey;
+}
+@media (max-width: 402px){
+  .ready-made-section .ready-made-header .ready-made-btn{
+    margin: 0 5px !important;
+  }
+}
+.ready-made-section .h1{
+    font-weight: 500;
+    font-size: 2rem;
+    color: var(--color-acent);
+}
+
+.ready-made-section .ready-made-main{
+    width: 100%;
+    height: fit-content;
+    /* padding: 20px 0; */
+}
+.ready-made-section .ready-made-main .p a{
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--color-secondary);
+    margin: 0 30px;
+}
+.ready-made-section .ready-made-main .p a:hover{
+    color: #ffffff;
+}
+.ready-made-section .ready-made-main .men-colapse, .women-colapse, .children-colapse{
+    padding: 100px 0 !important;
+}
+
+@media (max-width: 767px){
+  .ready-made-section .ready-made-main .card{
+    margin-top: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* contact */
+.contact{
+    width: 100%;
+    padding: 50px 0;
+}
+.contact .about-text h3{
+    font-weight: bolder;
+}
+.contact .about-text p{
+    font-weight: 500;
+}
+.contact input{
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0;
+    border: 2px solid var(--color-acent);
+}
+.contact textarea{
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--color-acent);
+}
+
+
+
+
+
+
+
+
+.thread-1 .card{
+  border: 2px solid grey;
+  border-radius: 30px 0 30px 0;
+}
+.thread-1 .card .card-image{
+  border-radius: 30px 0 0 30px;
+}
+
+
+.leather-1 .card{
+  border: 2px solid grey;
+  border-radius: 30px 0 30px 0;
+}
+.leather-1 .card .card-image{
+  border-radius: 30px 0 0 30px;
+}
+
+
+
+
+.ready-made1 .card{
+  border: 2px solid grey;
+  border-radius: 30px 0 30px 0;
+}
+.ready-made1 .card .card-image{
+  border-radius: 30px 0 0 30px;
+}

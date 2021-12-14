@@ -1,0 +1,795 @@
+<!doctype html>
+<html lang="en" ng-app="">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- jquary cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <title>E-Commerce</title>
+
+    <!-- Angular js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
+    <!-- google font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="static/css/index.css">
+
+</head>
+
+<body>
+
+
+    <!-- header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light shadow">
+            <div class="container-fluid">
+                <a class="p navbar-brand" href="index.html">Aba<span>Conect</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
+                        <li class="nav-item">
+                            <a class="p nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="p nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="p nav-link" href="women.html">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="p nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="p form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <a class="p btn btn-search" type="submit">Search</a>
+                    </form>
+                    <div class="nav-icon my-auto m-0 p-0 text-center">
+                        <ul class="navbar-icon m-auto">
+                            <li><a href="cart.html"><i class="fas fa-shopping-cart"><span class="mx-1">0</span></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="signin mx-5 text-center">
+                        <a class="p btn btn-search" href="" data-bs-target="#sign-in" data-bs-toggle="modal">Sign In</a>
+                        <a class="p btn btn-search" href="" data-bs-target="#sign-up" data-bs-toggle="modal">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- header end -->
+
+    <!-- ============================================================================================================================== -->
+    <!-- sign in -->
+    <div class="modal fade" id="sign-in" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content text-light">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Sign In</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label><i class="fa fa-envelope"></i> Email :</label>
+                        <input type="email" placeholder="Email Id" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fa fa-password"></i> Password :</label>
+                        <input type="password" placeholder="Password" class="form-control">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Sign in</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- sign in end -->
+    <!-- sign up  -->
+    <div class="modal fade" id="sign-up" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content text-light">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Let's Create Your Account for You</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label><i class="fa fa-user"></i> Name :</label>
+                        <input type="text" placeholder="Name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fa fa-envelope"></i> Email :</label>
+                        <input type="email" placeholder="Email Id" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fa fa-mobile"></i> Mobile Number :</label>
+                        <input type="number" placeholder="Mobile Number" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fa fa-address"></i> Address :</label>
+                        <input type="text" placeholder="Address" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fa fa-password"></i> Password :</label>
+                        <input type="password" placeholder="Password" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fa fa-password"></i> Confirm Password :</label>
+                        <input type="password" placeholder="Confirm Password" class="form-control">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Sign up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- sign up end -->
+    <!-- ============================================================================================================================== -->
+
+    <!-- hero section -->
+    <div class="hero-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-7">
+                    <div class="hero-image">
+                        <img src="static/img/xhero_man.png.pagespeed.ic.cN86RxAvqq.webp" alt="" class="image-hero">
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-5 m-auto">
+                    <div class="hero-right align-content-center py-3">
+                        <div class="hero-text">
+                            <p class="p">60% Discount</p>
+                            <h2 class="h2">Festive <br>
+                                Collections</h2>
+                            <small class="p">Best Cloths Collections</small>
+                        </div>
+                        <div class="hero-button">
+                            <a href="women.html">
+                                <buton class="btn btn-theme btn-xl mt-4">Shop Now</buton>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- hero section end -->
+
+
+    <!-- category section -->
+    <div class="category-page">
+        <div class="container-fluid">
+            <div class="col">
+                <div class="category-header">
+                    <h4 class="h4 text-center">Shop Category</h4>
+                </div>
+            </div>
+            <div class="col py-4">
+                <div class="category-main">
+                    <div class="row">
+                        <!-- women -->
+                        <div class="col-sm-12 col-md-4 m-0 p-0">
+                            <div class="women-category">
+                                <div class="container category-image-overlay">
+                                    <div class="col-12 px-3">
+                                        <div class="category-overlay-text text-end">
+                                            <p class="p">10% Discount</p>
+                                            <h5 class="p">Great Women <br> Deals</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- children -->
+                        <div class="col-sm-12 col-md-4 m-0 p-0">
+                            <div class="children-category">
+                                <div class="category-image-overlay">
+                                    <div class="col-12 px-3">
+                                        <div class="category-overlay-text text-center">
+                                            <p class="p">10% Discount</p>
+                                            <h5 class="p">Great Children <br> Deals</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- men -->
+                        <div class="col-sm-12 col-md-4 m-0 p-0">
+                            <div class="men-category">
+                                <div class="container category-image-overlay">
+                                    <div class="col-12 px-3">
+                                        <div class="category-overlay-text text-end">
+                                            <p class="p">10% Discount</p>
+                                            <h5 class="p">Great Men <br> Deals</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- category section end -->
+
+
+    <!-- latest products -->
+    <div class="latest-products-section">
+        <div class="container">
+            <div class="col">
+                <div class="latest-products-title">
+                    <h4 class="h4">Latest Products</h4>
+                </div>
+            </div>
+            <hr>
+            <div class="col">
+                <div class="latest-products-main">
+                    <!-- first row -->
+                    <div class="row justify-content-evenly">
+
+                        <!-- item 1 -->
+                        <div class="col-sm-12 col-md-3 mt-lg-0 my-3">
+                            <div class="card p-0">
+                                <img src="static/img/men1.jpg" alt="" class="card-img-top p-0">
+                                <div class="card-body">
+                                    <h4 class="h4 card-title">Vintage<span class="float-end"><i class="fas fa-heart"
+                                                id="heart1" style="font-size: 20px; color:black;"></i></span></h4>
+                                    <!-- <p class="p card-text" id="carddes">Lorem ipsum dolor sit, amet consectetur
+                                        adipisicing</p> -->
+                                    <div class="d-flex justify-content-start small text-warning mb-2">
+                                        <div class="fas fa-star"></div>
+                                        <div class="fas fa-star"></div>
+                                        <div class="fas fa-star"></div>
+                                        <div class="fas fa-star"></div>
+                                        <div class="fas fa-star"></div>
+                                    </div>
+                                    <p class="p" id="cardpera">#3000</p>
+                                    <div class="card-footer border-top-0 bg-transparent mt-4">
+                                        <div class="text-center"><a
+                                                class="btn btn-outline-dark shop btn-theme3 mt-auto">Add to cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- item 1 end -->
+
+                        <!-- item 2 -->
+                        <div class="col-sm-12 col-md-3 mt-lg-0 my-3">
+                            <div class="card p-0">
+                                <img src="static/img/child 5.jpg" alt="" class="card-img-top p-0">
+                                <div class="card-body">
+                                    <h4 class="h4 card-title">Child Wear<span class="float-end"><i class="fas fa-heart"
+                                                id="heart2" style="font-size: 20px; color:black;"></i></span></h4>
+                                    <!-- <p class="p card-text" id="carddes">Lorem ipsum dolor sit, amet consectetur
+                                        adipisicing</p> -->
+                                    <div class="d-flex justify-content-start small text-warning mb-2">
+                                        <div class="fas fa-star"></div>
+                                        <div class="fas fa-star"></div>
+                                        <div class="fas fa-star"></div>
+                                        <div class="fas fa-star"></div>
+                                        <div class="fas fa-star"></div>
+                                    </div>
+                                    <p class="p" id="cardpera">#7000</p>
+                                    <div class="card-footer border-top-0 bg-transparent mt-4">
+                                        <div class="text-center"><a
+                                                class="btn btn-outline-dark shop btn-theme3 mt-auto">Add to cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- item 2 end -->
+
+                        <!-- item 3 -->
+                        <div class=" col-sm-12 col-md-3 mt-lg-0 my-3">
+                            <div class="card p-0">
+                                <img src="static/img/men 5.jpg" alt="" class="card-img-top p-0">
+                                <div class="card-body">
+                                    <h4 class="h4 card-title">Stripped Shirt <span class="float-end"><i
+                                                class="fas fa-heart" id="heart3"
+                                                style="font-size: 20px; color:black;"></i></span></h4>
+                                    <!-- <p class="p card-text" id="carddes">Lorem ipsum dolor sit, amet consectetur
+                                        adipisicing</p> -->
+                                    <div class="d-flex justify-content-start small text-warning mb-2">
+                                        <div class="fas fa-star"></div>
+                                        <div class="fas fa-star"></div>
+                                        <div class="fas fa-star"></div>
+                                        <div class="fas fa-star"></div>
+                                        <div class="fas fa-star"></div>
+                                    </div>
+                                    <p class="p" id="cardpera">#6000</p>
+                                    <div class="card-footer border-top-0 bg-transparent mt-4">
+                                        <div class="text-center"><a
+                                                class="btn btn-outline-dark shop btn-theme3 mt-auto">Add to cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- item 3 end -->
+
+                    </div>
+                    <!-- first row end -->
+
+                    <!-- second row -->
+                    <div class="row justify-content-evenly">
+
+                        <!-- item 1 -->
+                        <div class="col-md-3 mt-lg-0 my-3">
+                            <div class="card p-0">
+                                <img src="static/img/women 3.jpg" alt="" class="card-img-top p-0">
+                                <div class="card-body">
+                                    <h4 class="h4 card-title">Cotton Collection<span class="float-end"><i
+                                                class="fas fa-heart" id="heart4"
+                                                style="font-size: 20px; color:black;"></i></span></h4>
+                                    <!-- <p class="p card-text" id="carddes">Lorem ipsum dolor sit, amet consectetur
+                                        adipisicing</p> -->
+                                    <div class="d-flex justify-content-start small text-warning mb-2">
+                                        <div class="fas fa-star"></div>
+                                        <div class="fas fa-star"></div>
+                                        <div class="fas fa-star"></div>
+                                        <div class="fas fa-star"></div>
+                                        <div class="fas fa-star"></div>
+                                    </div>
+                                    <p class="p" id="cardpera">#7000</p>
+                                    <div class="card-footer border-top-0 bg-transparent mt-4">
+                                        <div class="text-center"><a
+                                                class="btn btn-outline-dark shop btn-theme3 mt-auto">Add to cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- item 1 end -->
+
+                        <!-- item 2 -->
+                        <div class="col-md-3 mt-lg-0 my-3">
+                            <div class="card p-0">
+                                <img src="static/img/women 8.jpg" alt="" class="card-img-top p-0">
+                                <div class="card-body">
+                                    <h4 class="h4 card-title">Pink Shoes<span class="float-end"><i class="fas fa-heart"
+                                                id="heart5" style="font-size: 20px; color:black;"></i></span></h4>
+                                    <!-- <p class="p card-text" id="carddes">Lorem ipsum dolor sit, amet consectetur
+                                        adipisicing</p> -->
+                                    <div class="d-flex justify-content-start small text-warning mb-2">
+                                        <div class="fas fa-star"></div>
+                                        <div class="fas fa-star"></div>
+                                        <div class="fas fa-star"></div>
+                                        <div class="fas fa-star"></div>
+                                        <div class="fas fa-star"></div>
+                                    </div>
+                                    <p class="p" id="cardpera">#8,000</p>
+                                    <div class="card-footer border-top-0 bg-transparent mt-4">
+                                        <div class="text-center"><a
+                                                class="btn btn-outline-dark shop btn-theme3 mt-auto">Add to cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- item 2 end -->
+
+                        <!-- item 3 -->
+                        <div class="col-md-3 mt-lg-0 my-3">
+                            <div class="card p-0">
+                                <img src="static/img/men 10.jpg" alt="" class="card-img-top p-0">
+                                <div class="card-body">
+                                    <h4 class="h4 card-title">Classic Wristwatches <span class="float-end"><i
+                                                class="fas fa-heart" id="heart6"
+                                                style="font-size: 20px; color:black;"></i></span></h4>
+                                    <!-- <p class="p card-text" id="carddes">Lorem ipsum dolor sit, amet consectetur
+                                        adipisicing</p> -->
+                                    <div class="d-flex justify-content-start small text-warning mb-2">
+                                        <div class="fas fa-star"></div>
+                                        <div class="fas fa-star"></div>
+                                        <div class="fas fa-star"></div>
+                                        <div class="fas fa-star"></div>
+                                        <div class="fas fa-star"></div>
+                                    </div>
+                                    <p class="p" id="cardpera">#15,000</p>
+                                    <div class="card-footer border-top-0 bg-transparent mt-4">
+                                        <div class="text-center"><a
+                                                class="btn btn-outline-dark shop btn-theme3 mt-auto">Add to cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- item 3 end -->
+
+                    </div>
+                    <!-- second row end -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- latest products end -->
+
+    <!-- section break -->
+    <div class="section-break">
+        <div class="container">
+            <div class="section-break-bg">
+                <div class="container">
+                    <div class="imagees">
+                        <div class="row">
+                            <div class=" col-3 img3">
+                                <img src="static/img/xcollection2.png.pagespeed.ic.1WKxZbEmZj.webp" alt=""
+                                    class="section-break-image" width="100%">
+                            </div>
+                            <div class="col-5 m-auto">
+                                <div class="section-break-text text-center">
+                                    <h1 class="h1">Find The Best Products From Our Store</h1>
+                                    <buton class="btn btn-theme btn-xl mt-4">Shop Now</buton>
+                                </div>
+
+                            </div>
+                            <div class=" col-3 img4">
+                                <img src="static/img/xgodisable-jacob-794062.png" alt="" class="section-break-image"
+                                    width="100%">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- section break end -->
+
+    <!-- mail Section -->
+    <section class="mail-section">
+        <div class="container">
+            <div class="mail-section-main">
+                <div class="mail-section-header">
+                    <h1 class="h1">Any Question?<br>Let us help you</h1>
+                </div>
+                <div class="mail-section-main-mail">
+                    <div class="col-lg-8 col-md-11 mx-auto form shadow mt-3">
+                        <div class="row">
+                            <div class="col-md-9 my-auto">
+                                <input type="text" class="form-control" placeholder="yourmail@domain.com">
+                            </div>
+                            <div class="col-md-3 text-end">
+                                <a class="btn btn-theme">Send</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- mail Section end-->
+
+    <!-- Work sec -->
+    <section class="work-section">
+        <div class="container">
+            <div class="row justify-content-between my-5">
+                <div class="col-sm-12 col-md-4">
+                    <div class="service-show">
+                        <img src="static/img/services1.svg" alt="" class="icon">
+                        <h4 class="h4 mb-4">Fast & Free Delivery</h4>
+                        <p>Lorem ipsum dolor, sit amet consectetur ipsum dolor, sit amet consectetur</p>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="service-show">
+                        <img src="static/img/services2.svg" alt="" class="icon">
+                        <h4 class="h4 mb-4">Secure Payment</h4>
+                        <p>Lorem ipsum dolor, sit amet consectetur ipsum dolor, sit amet consectetur</p>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="service-show">
+                        <img src="static/img/services4.svg" alt="" class="icon">
+                        <h4 class="h4 mb-4">Online Support</h4>
+                        <p>Lorem ipsum dolor, sit amet consectetur ipsum dolor, sit amet consectetur</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Work sec end-->
+
+    <!-- footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-3 my-lg-auto my-4">
+                    <h6 class="p m-0">GET TO KNOW US</h6>
+                    <hr>
+                    <ul>
+                        <li class="p"><a href="#">About Us</a></li>
+                        <li class="p"><a href="#">Blog</a></li>
+                        <li class="p"><a href="#">Career</a></li>
+                        <li class="p"><a href="#">Forum</a></li>
+                        <li class="p"><a href="#">Terms & Condition</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-3 col-6 my-lg-0 my-4">
+                    <h6 class="p m-0">PAYMENT METHOD</h6>
+                    <hr>
+                    <ul>
+                        <li class="p"><a href="#">Mastherard</a></li>
+                        <li class="p"><a href="#">VISA</a></li>
+                        <li class="p"><a href="#">Verve</a></li>
+                        <li class="p"><a href="#">Wallet</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-3 col-6 my-lg-0 my-4">
+                    <h6 class=" p m-0">MORE INFO</h6>
+                    <hr>
+                    <ul>
+                        <li class="p"><a href="#">Site Map</a></li>
+                        <li class="p"><a href="#">Track My Order</a></li>
+                        <li class="p"><a href="#">Privacy Policy</a></li>
+                        <li class="p"><a href="#">Authentic Items Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-3 col-6 my-lg-0 my-4">
+                    <h6 class=" p m-0">contacts</h6>
+                    <hr>
+                    <ul>
+                        <li class="p">+2348021440772</li>
+                        <li class="p">brand@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <h6 class="p m-0">JOIN US ON</h6>
+                    <hr>
+                    <div class="fast-icons">
+                        <a href="#"><i class="fab fa-facebook mx-1" style="font-size: 20px;"></i></a>
+                        <a href="#"><i class="fab fa-instagram mx-1" style="font-size: 20px;"></i></a>
+                        <a href="#"><i class="fab fa-twitter mx-1" style="font-size: 20px;"></i></a>
+                        <a href="#"><i class="fab fa-youtube mx-1" style="font-size: 20px;"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- custom js -->
+    <script src="static/js/index.js"></script>
+    <script>
+        if (document.readyState == 'loading') {
+            document.addEventListener('DOMContentLoaded', ready)
+        } else {
+            ready()
+        }
+
+
+        function ready() {
+            var removeCartItemButtons = document.getElementsByClassName('btn-danger')
+            for (var i = 0; i < removeCartItemButtons.length; i++) {
+                var button = removeCartItemButtons[i]
+                button.addEventListener('click', removeCartItem)
+            }
+        }
+
+
+        let carts = document.querySelectorAll('.btn-theme3');
+        let products = [
+            {
+                name: "Vintage",
+                tag: 'men1.jpg',
+                price: 5000,
+                incart: 0
+            },
+            {
+                name: "Child Wears",
+                tag: 'child 5.jpg',
+                price: 10000,
+                incart: 0
+            },
+            {
+                name: "Stripped Shirt",
+                tag: 'men 5.jpg',
+                price: 5000,
+                incart: 0
+            },
+            {
+                name: "Cotton Collection",
+                tag: 'women 3.jpg',
+                price: 5000,
+                incart: 0
+            },
+            {
+                name: "Pink Shoes",
+                tag: 'women 8.jpg',
+                price: 30000,
+                incart: 0
+            },
+            {
+                name: "Classic Wristwatch",
+                tag: 'men 10.jpg',
+                price: 18000,
+                incart: 0
+            }
+
+        ]
+        for (let i = 0; i < carts.length; i++) {
+            carts[i].addEventListener('click', () => {
+                cartNumbers(products[i])
+                totalCost(products[i])
+            })
+        }
+
+        function onLoadCartNumbers() {
+            let productNumbers = localStorage.getItem('cartNumbers')
+
+            if (productNumbers) {
+                document.querySelector('li span').textContent = productNumbers;
+            }
+        }
+
+        function cartNumbers(product) {
+            let productNumbers = localStorage.getItem('cartNumbers')
+            productNumbers = parseInt(productNumbers)
+
+            if (productNumbers) {
+                localStorage.setItem('cartNumbers', productNumbers + 1)
+                document.querySelector('li span').textContent = productNumbers + 1;
+            } else {
+                localStorage.setItem('cartNumbers', 1)
+                document.querySelector('li span').textContent = 1;
+            }
+
+            setItems(product);
+
+        }
+
+        function setItems(product) {
+            let cartItems = localStorage.getItem('productsInCart')
+            cartItems = JSON.parse(cartItems)
+
+
+
+
+            if (cartItems != null) {
+
+                if (cartItems[product.tag] == undefined) {
+                    cartItems = {
+                        ...cartItems,
+                        [product.tag]: product
+                    }
+                }
+                cartItems[product.tag].incart += 1;
+            } else {
+                product.incart = 1;
+                cartItems = {
+                    [product.tag]: product
+                }
+            }
+
+
+            localStorage.setItem('productsInCart', JSON.stringify(cartItems))
+        }
+
+        function totalCost(product) {
+            let cartCost = localStorage.getItem('totalCost');
+
+
+            if (cartCost != null) {
+                cartCost = parseInt(cartCost);
+                localStorage.setItem('totalCost', cartCost + product.price)
+            } else {
+                localStorage.setItem('totalCost', product.price)
+            }
+        }
+
+
+        function removeCartItem(event) {
+            var buttonClicked = event.target
+            buttonClicked.parentElement.parentElement.remove()
+
+        }
+
+
+        function displayCart() {
+            let cartItems = localStorage.getItem('productsInCart')
+            cartItems = JSON.parse(cartItems)
+
+            let productContainer = document.querySelector('.cart-items')
+            let cartCost = localStorage.getItem('totalCost');
+            if (cartItems && productContainer) {
+
+                productContainer.innerHTML = '';
+                Object.values(cartItems).map(item => {
+                    productContainer.innerHTML += `
+                <div class="cart-row d-flex">
+                    <div class="cart-item cart-column">
+                        <img class="cart-item-image" src="./static/img/${item.tag}" width="100" height="100">
+                        <span class="cart-item-title">${item.name}</span>
+                    </div>
+                    <span class="cart-price cart-column">${item.price},00</span>
+                    <div class="cart-quantity cart-column">
+                    <input type="number" value="${item.incart}" class="cart-quantity-input">
+                        <button class="btn mx-4 btn-danger" type="button">REMOVE</button>
+                    </div>
+                </div>
+            `
+                })
+                productContainer.innerHTML += `
+                <div class="cart-total">
+                    <strong class="cart-total-title">Total</strong>
+                    <span class="cart-total-price">$${cartCost},00</span>
+                </div>
+    
+        `
+            }
+        }
+        onLoadCartNumbers();
+        displayCart();
+    </script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> -->
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+
+
+
+
+</body>
+
+</html>
